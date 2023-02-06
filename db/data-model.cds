@@ -7,23 +7,50 @@ namespace guipup;
 
 entity product : managed {
   key id                  : Integer;
-      cohitech            : String;
-      tarifCode           : String;
-      moq                 : String;
-      case_count          : String;
-      cases_per_pallet    : String;
-      gross               : String;
-      total_height        : String;
-      inches              : String;
-      pallet_weight       : String;
-      cases_per_container : String;
-      pallets_loaded      : Boolean;
-      container_lbs       : Boolean;
-      fob_per_pack        : Boolean;
-      trucking_barcelona  : Boolean;
-      ofreight_cost       : Boolean;
-      duties              : Boolean;
-      duties_paid         : Boolean;
-      ofreight_unit       : Boolean;
-      pallets_cont        : Boolean;
+      cohitech            : String; //p
+      tariffCode          : String; //p
+      moq                 : String; //p
+      origin              : String; //p
+      caseCount           : Integer; //p
+      casesPerPallet      : Integer; //p
+      grossKg             : Decimal; //p
+      palletTotalHeight   : Decimal; //p
+      inches              : Decimal;
+      palletWeight        : Integer;
+      casesPerContainer   : Decimal;
+      _40qtyPallets       : Decimal;
+      containerLbs        : Decimal;
+      fobPerPack          : Decimal;
+      truckingBarcelona   : Decimal;
+      oFreightCost        : Decimal;
+      duties              : Decimal;
+      dutiesToBePaid      : Decimal;
+      customsBroker       : Decimal;
+      oFreightCostUnit    : Decimal;
+      palletsPerCont      : Decimal;
+      containersPerYear   : Decimal;
+      monthsForStorage    : Integer;
+      contTransportNY     : Decimal;
+      palletUnloadRec     : Decimal;
+      fixedWarehPerCont   : Decimal;
+      palletSlipSheet     : Decimal;
+      wrapPerPallet       : Decimal;
+      pickingNC           : Decimal;
+      storagePerPalletNC  : Decimal;
+      packSlipPerOrder    : Decimal;
+      orderProcessing     : Decimal;
+      totalWarehouse      : Decimal;
+      totalLandedCost     : Decimal;
+      buffer              : Decimal;
+      HRSGlobalComm       : Decimal;
+      priceToRetailer     : Decimal;
+      notes               : Decimal;
+      totalCasesinXPallet : Decimal;
+      avgCHR135Pallet     : Decimal;
+      lumperUnloadCharge  : Decimal;
+      total               : Decimal;
+      paymentTerms        : Decimal;
+      dlvyCostPerUnit     : Decimal;
+      totalDelivCost      : Decimal;
+      factorExworks       : Decimal;
 }

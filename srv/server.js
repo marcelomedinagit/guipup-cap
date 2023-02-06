@@ -1,4 +1,4 @@
-const cds = require("@sap/cds");
+/* const cds = require("@sap/cds");
 const proxy = require("@sap/cds-odata-v2-adapter-proxy");
 const cors = require('cors');
 
@@ -10,4 +10,4 @@ cds.on("bootstrap", app => {
     app.use(proxy({ path: "v2", port:PORT, host:HOST }));
 })
 
-module.exports = cds.server;
+module.exports = cds.server; */

@@ -1,13 +1,25 @@
 const cds = require("@sap/cds");
-const dotenv = require('dotenv')
-dotenv.config()
+//importar módulo "calculate"
+const requestModule = require('./modules/formulas');
+/* const req = {
+    cohitech: "00963",
+    tariffCode: "9619.00.15",
+    moq: 130621,
+    origin: "Spain",
+    caseCount: 6,
+    casesPerPallet: 364,
+    grossKg: 1, 16
+} */
+
+//const dotenv = require('dotenv')
+//dotenv.config()
 
 async function createProduct(req) {
     return req.data;
 }
 
 async function getProduct(req) {
-    return req;
+    return requestModule.calculate();
 }
 
 async function updateProduct(req) {

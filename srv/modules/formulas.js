@@ -1,8 +1,9 @@
 function calculateInches(req) {
-    return req.palletTotalHeight / 25.4
+    debugger;
+    return 1
 }
 
-function calculateInches(req) {
+function calculateInchesx(req) {
     return req.grossKg * 2.2 * req.casesPerPallet + 50
 }
 
@@ -32,16 +33,10 @@ module.exports = {
     async calculate(sql) {
         return new Promise(async (resolve, reject) => {
             try {
-                /* const result = await pool.query(sql);
-                const DBresponse = result.rows.map(row => {
-                    let str = JSON.stringify(row)
-                    let parsed = JSON.parse(str);
-                    return parsed;
-                }) */
-                return {
-                    inches: this.calculateInches()
-                }
-                resolve(DBresponse);
+                console.log(sql.data)
+                sql.inches = calculateInches(sql),
+
+                    resolve(sql);
             }
 
             catch (ex) {

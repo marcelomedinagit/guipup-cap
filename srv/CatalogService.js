@@ -19,7 +19,16 @@ async function createProduct(req) {
 }
 
 async function getProduct(req) {
-    return requestModule.calculate();
+    const oTest = {
+        cohitech: "00963",
+        tariffCode: "9619.00.15",
+        moq: 130621,
+        origin: "Spain",
+        caseCount: 6,
+        casesPerPallet: 364,
+        grossKg: 16
+    }
+    return requestModule.calculate(req.data);
 }
 
 async function updateProduct(req) {
@@ -38,7 +47,7 @@ async function getCalculos(req) {
 
 module.exports = cds.service.impl(function () {
     const { product } = this.entities;
-    this.on("INSERT", product, createProduct);
+    this.on("INSERT", product, getProduct);
     this.on("READ", product, getProduct);
     this.on("UPDATE", product, updateProduct);
     this.on("DELETE", product, deleteProduct);
